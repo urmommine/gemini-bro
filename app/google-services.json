@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "418477574901",
+    "project_id": "gemini-ai-5fff0",
+    "storage_bucket": "gemini-ai-5fff0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:418477574901:android:5f31c104fabdb81c6d53bc",
+        "android_client_info": {
+          "package_name": "com.coba.geminiai"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvhbI_1_bKS51IWfTGPoNkbllEwFj_udI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

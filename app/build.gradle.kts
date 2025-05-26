@@ -1,13 +1,14 @@
 plugins {
     alias(libs.plugins.android.application)
+    id("com.google.gms.google-services")
 }
 
 android {
-    namespace = "com.azhar.geminiai"
+    namespace = "com.coba.geminiai"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.azhar.geminiai"
+        applicationId = "com.coba.geminiai"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -31,6 +32,7 @@ android {
     }
     buildFeatures {
         buildConfig = true
+        viewBinding = true
     }
 }
 
@@ -47,7 +49,13 @@ dependencies {
     implementation(libs.lottie)
     implementation(libs.guava)
     implementation(libs.reactive.streams)
+    implementation(libs.annotation)
+    implementation(libs.lifecycle.livedata.ktx)
+    implementation(libs.lifecycle.viewmodel.ktx)
+    implementation(libs.firebase.auth)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    implementation(platform("com.google.firebase:firebase-bom:33.14.0"))
+
 }
