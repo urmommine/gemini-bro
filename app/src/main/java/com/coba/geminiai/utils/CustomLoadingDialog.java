@@ -11,14 +11,6 @@ import android.view.WindowManager;
 
 import com.coba.geminiai.R;
 
-/*
- * Created by Azhar Rivaldi on 12-06-2024
- * Youtube Channel : https://bit.ly/2PJMowZ
- * Github : https://github.com/AzharRivaldi
- * Twitter : https://twitter.com/azharrvldi_
- * Instagram : https://www.instagram.com/azhardvls_
- * LinkedIn : https://www.linkedin.com/in/azhar-rivaldi
- */
 
 public class CustomLoadingDialog extends Dialog {
     public CustomLoadingDialog(Context context) {

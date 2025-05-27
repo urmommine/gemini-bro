@@ -11,14 +11,7 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 import com.coba.geminiai.fragment.FragmentGenerateText;
 import com.coba.geminiai.fragment.FragmentImageRecognition;
 
-/*
- * Created by Azhar Rivaldi on 12-06-2024
- * Youtube Channel : https://bit.ly/2PJMowZ
- * Github : https://github.com/AzharRivaldi
- * Twitter : https://twitter.com/azharrvldi_
- * Instagram : https://www.instagram.com/azhardvls_
- * LinkedIn : https://www.linkedin.com/in/azhar-rivaldi
- */
+
 
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
