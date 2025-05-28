@@ -7,4 +7,11 @@
     <color name="colorAccent">#D3EEED</color>
     <color name="colorAccentDark">#EBDAFE</color>
     <color name="colorGrayLight">#DBDBDB</color>
+
+    <color name="lavender_primary">#B57EDC</color> <!-- Soft Lavender -->
+    <color name="lavender_primary_variant">#A167C9</color> <!-- Deep Lavender -->
+    <color name="lavender_secondary">#D8BFD8</color> <!-- Thistle-like Lavender -->
+    <color name="lavender_secondary_variant">#C8A2C8</color> <!-- Orchid-ish -->
+    <color name="lavender_status_bar">#A167C9</color> <!-- Sesuaikan dengan primary variant -->
+
 </resources>

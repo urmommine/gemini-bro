@@ -137,25 +137,47 @@ public class FragmentImageRecognition extends Fragment {
                 }).check();
     }
 
-    private void pickImageFromGallery() {
-        Dexter.withContext(requireContext())
-                .withPermissions(Manifest.permission.READ_EXTERNAL_STORAGE)
-                .withListener(new MultiplePermissionsListener() {
-                    @Override
-                    public void onPermissionsChecked(@NonNull MultiplePermissionsReport report) {
-                        if (report.areAllPermissionsGranted()) {
-                            Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                            galleryLauncher.launch(intent);
-                        }
-                    }
-
-                    @Override
-                    public void onPermissionRationaleShouldBeShown(@NonNull List<PermissionRequest> permissions, @NonNull PermissionToken token) {
-                        token.continuePermissionRequest();
-                    }
-                }).check();
+    private void openGallery() {
+        Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        intent.setType("image/*");
+        galleryLauncher.launch(intent);
     }
 
+    private void pickImageFromGallery() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            Dexter.withContext(requireContext())
+                    .withPermissions(Manifest.permission.READ_MEDIA_IMAGES)
+                    .withListener(new MultiplePermissionsListener() {
+                        @Override
+                        public void onPermissionsChecked(@NonNull MultiplePermissionsReport report) {
+                            if (report.areAllPermissionsGranted()) {
+                                openGallery();
+                            }
+                        }
+
+                        @Override
+                        public void onPermissionRationaleShouldBeShown(@NonNull List<PermissionRequest> permissions, @NonNull PermissionToken token) {
+                            token.continuePermissionRequest();
+                        }
+                    }).check();
+        } else {
+            Dexter.withContext(requireContext())
+                    .withPermissions(Manifest.permission.READ_EXTERNAL_STORAGE)
+                    .withListener(new MultiplePermissionsListener() {
+                        @Override
+                        public void onPermissionsChecked(@NonNull MultiplePermissionsReport report) {
+                            if (report.areAllPermissionsGranted()) {
+                                openGallery();
+                            }
+                        }
+
+                        @Override
+                        public void onPermissionRationaleShouldBeShown(@NonNull List<PermissionRequest> permissions, @NonNull PermissionToken token) {
+                            token.continuePermissionRequest();
+                        }
+                    }).check();
+        }
+    }
     private File createImageFile() throws IOException {
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         File storageDir = requireActivity().getExternalFilesDir(Environment.DIRECTORY_PICTURES);

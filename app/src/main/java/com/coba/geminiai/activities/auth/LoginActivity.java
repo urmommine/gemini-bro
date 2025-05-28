@@ -25,6 +25,17 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        boolean isLoggedIn = getSharedPreferences("LOGIN_PREF", MODE_PRIVATE)
+                .getBoolean("IS_LOGGED_IN", false);
+
+        if (isLoggedIn && FirebaseAuth.getInstance().getCurrentUser() != null) {                                Toast.makeText(LoginActivity.this, "Selamat Datang!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(LoginActivity.this, "Selamat Datang!", Toast.LENGTH_SHORT).show();
+
+            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+            finish();
+            return;
+        }
         setContentView(R.layout.activity_login);
 
         mAuth = FirebaseAuth.getInstance();
@@ -33,6 +44,11 @@ public class LoginActivity extends AppCompatActivity {
         etPassword = findViewById(R.id.etPassword);
         btnLogin = findViewById(R.id.btnLogin);
         tvRegister = findViewById(R.id.tvRegister);
+
+        String cachedEmail = getSharedPreferences("LOGIN_PREF", MODE_PRIVATE)
+                .getString("EMAIL", "");
+        etEmail.setText(cachedEmail);
+
         btnLogin.setOnClickListener(view -> {
             String getEmail = etEmail.getText().toString().trim();
             String getPassword = etPassword.getText().toString().trim();
@@ -41,6 +57,10 @@ public class LoginActivity extends AppCompatActivity {
                 mAuth.signInWithEmailAndPassword(getEmail, getPassword)
                         .addOnCompleteListener(task -> {
                             if (task.isSuccessful()){
+                                getSharedPreferences("LOGIN_PREF", MODE_PRIVATE).edit()
+                                        .putString("EMAIL", getEmail)
+                                        .putBoolean("IS_LOGGED_IN", true)
+                                        .apply();
                                 Toast.makeText(LoginActivity.this, "Selamat Datang!", Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(LoginActivity.this, MainActivity.class));
                                 finish();

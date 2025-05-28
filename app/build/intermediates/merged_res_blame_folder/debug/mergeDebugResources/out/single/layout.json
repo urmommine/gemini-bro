@@ -1,38 +1,30 @@
 [
     {
-        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.10.2\\com.coba.geminiai.app-mergeDebugResources-45:\\layout\\activity_login.xml",
-        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.10.2\\com.coba.geminiai.app-main-48:\\layout\\activity_login.xml"
-    },
-    {
         "merged": "com.coba.geminiai.app-mergeDebugResources-45:/layout/activity_login.xml",
         "source": "com.coba.geminiai.app-main-48:/layout/activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.10.2\\com.coba.geminiai.app-mergeDebugResources-45:\\layout\\activity_register.xml",
-        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.10.2\\com.coba.geminiai.app-main-48:\\layout\\activity_register.xml"
+        "merged": "com.coba.geminiai.app-mergeDebugResources-45:/layout/toolbar_main.xml",
+        "source": "com.coba.geminiai.app-main-48:/layout/toolbar_main.xml"
     },
     {
-        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.10.2\\com.coba.geminiai.app-mergeDebugResources-45:\\layout\\layout_progress_dialog.xml",
-        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.10.2\\com.coba.geminiai.app-main-48:\\layout\\layout_progress_dialog.xml"
+        "merged": "com.coba.geminiai.app-mergeDebugResources-45:/layout/fragment_image_recognition.xml",
+        "source": "com.coba.geminiai.app-main-48:/layout/fragment_image_recognition.xml"
     },
     {
-        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.10.2\\com.coba.geminiai.app-mergeDebugResources-45:\\layout\\fragment_generate_text.xml",
-        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.10.2\\com.coba.geminiai.app-main-48:\\layout\\fragment_generate_text.xml"
+        "merged": "com.coba.geminiai.app-mergeDebugResources-45:/layout/fragment_generate_text.xml",
+        "source": "com.coba.geminiai.app-main-48:/layout/fragment_generate_text.xml"
     },
     {
-        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.10.2\\com.coba.geminiai.app-mergeDebugResources-45:\\layout\\fragment_image_recognition.xml",
-        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.10.2\\com.coba.geminiai.app-main-48:\\layout\\fragment_image_recognition.xml"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.10.2\\com.coba.geminiai.app-mergeDebugResources-45:\\layout\\toolbar_main.xml",
-        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.10.2\\com.coba.geminiai.app-main-48:\\layout\\toolbar_main.xml"
+        "merged": "com.coba.geminiai.app-mergeDebugResources-45:/layout/activity_main.xml",
+        "source": "com.coba.geminiai.app-main-48:/layout/activity_main.xml"
     },
     {
         "merged": "com.coba.geminiai.app-mergeDebugResources-45:/layout/activity_register.xml",
         "source": "com.coba.geminiai.app-main-48:/layout/activity_register.xml"
     },
     {
-        "merged": "C:\\Users\\Administrator\\.gradle\\daemon\\8.10.2\\com.coba.geminiai.app-mergeDebugResources-45:\\layout\\activity_main.xml",
-        "source": "C:\\Users\\Administrator\\.gradle\\daemon\\8.10.2\\com.coba.geminiai.app-main-48:\\layout\\activity_main.xml"
+        "merged": "com.coba.geminiai.app-mergeDebugResources-45:/layout/layout_progress_dialog.xml",
+        "source": "com.coba.geminiai.app-main-48:/layout/layout_progress_dialog.xml"
     }
 ]

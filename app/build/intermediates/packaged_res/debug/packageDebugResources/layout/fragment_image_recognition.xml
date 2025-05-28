@@ -37,11 +37,11 @@
             android:layout_marginBottom="20dp"
             android:text="Ambil Gambar"
             android:textAllCaps="false"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold"
             android:theme="@style/Theme.MaterialComponents"
-            app:backgroundTint="@color/colorPrimaryDark"
+            app:backgroundTint="@color/lavender_primary"
             app:cornerRadius="50dp"
             app:elevation="5dp"
             app:rippleColor="@color/colorPrimaryDark" />
